@@ -28,7 +28,7 @@ function Register() {
     e.preventDefault();
     try {
       if (userType === "citizen") {
-        await axios.post("http://localhost:8080/citizen/register", {
+        await axios.post("http://localhost:8080/api/citizen/register", {
           vat: formData.vat,
           firstName: formData.firstName,
           lastName: formData.lastName,
@@ -36,7 +36,7 @@ function Register() {
           password: formData.password,
         });
       } else {
-        await axios.post("http://localhost:8080/dealership/register", {
+        await axios.post("http://localhost:8080/api/dealership/register", {
           vat: formData.vat,
           name: formData.name,
           owner: formData.owner,
